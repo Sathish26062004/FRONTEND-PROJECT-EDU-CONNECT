@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - Your Gateway to Learning</title>
+    <title>Navigation Bar with Ads and Auto-Swapping Photos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 20px;
+		}
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            height: 70px;
+        }
+        nav {
+            background-color: #000000;
+            color: #fff;
+            text-align: right;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        h4{
+            color: #b52cc2;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 40px;
+        }
+        .photo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> SA EDUCONNECT</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="course.html">Courses</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+		<a href="login.html">  <button style="border-left: 100px;border-radius: 5px;background-color: rgb(177, 14, 14);color: azure;">Login</button>
+    </a>
+</nav>
+
+
+    <section>
+        <script>
+            function swapPhotos() {
+                var photo1 = document.getElementById('photo1');
+                var photo2 = document.getElementById('photo2');
+                var photo3 = document.getElementById('photo3');
+
+                // Swap the photo sources
+                var temp = photo1.src;
+                photo1.src = photo2.src;
+                photo2.src = photo3.src;
+                photo3.src = temp;
+            }
+
+            // Auto swap photos every 3 seconds
+            setInterval(swapPhotos, 3000);
+        </script>
+        <!-- Ad -->
+        <div class="ad">
+            <h3 style="text-align: center;font-family: Verdana, Geneva, Tahoma, sans-serif;font-style: italic;">Advertisement</h3>
+            <p></p>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="photo-container">
+                        <img id="photo1" src="uploads/images (8).jpeg" alt="Photo 1">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="photo-container">
+                        <img id="photo2" src="uploads/img1.jpg.jpeg" alt="Photo 2">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="photo-container">
+                        <img id="photo3" src="uploads/img2.jpg.jpg" alt="Photo 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured Courses</h2>
+        <div class="course">
+            <h3>Web Development</h3>
+            <p>Learn to build dynamic websites and web applications using the latest technologies such as HTML, CSS, JavaScript</p>
+        </div>
+        <div class="course">
+            <h3>Data Science</h3>
+            <p>Master the art of data analysis and visualization with our comprehensive data science courses. Explore techniques for extracting valuable insights from complex datasets.</p>
+        </div>
+        <div class="course">
+            <h3>Graphic Design</h3>
+            <p>Unleash your creativity with our graphic design courses. Learn to create stunning visuals, logos, and illustrations using popular design tools.</p>
+        </div>
+        <div class="course">
+            <h3>Language Learning</h3>
+            <p>Expand your horizons by learning a new language. Our language courses cover a wide range of languages and proficiency levels, helping you communicate effectively in any setting.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>facilities</h2>
+        <ul>
+            <li>Flexible Learning: Study at your own pace and on your schedule.</li>
+            <li>Expert Instructors: Learn from industry experts with real world experience.</li>
+            <li>Interactive Content: Interactive quizzes, assignments, and projects.</li>
+            <li>24/7 Support: Get assistance whenever you need it from our dedicated support team.</li>
+        </ul>
+    </section>
+
+    <section style="text-align: center;">
+        <h4>Get Started </h4>
+        <p>Ready to start the journey? Sign up now and unlock a world of knowledge!</p>
+		<a href="signup.html">
+        <button style="text-align: center; border-radius: 5px;">Sign Up</button>
+		</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 SAEduConnect. All rights reserved.</p>
+    </footer>
+</body>
+</html>

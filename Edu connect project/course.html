@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - Courses</title>
+    <style>
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        nav {
+            background-color: #000000;
+            color: #fff;
+            text-align: right;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+
+        .course-title {
+            font-size: 20px;
+            color: #007bff;
+            margin-bottom: 5px;
+            flex-basis: 100%; 
+        }
+
+        .course-description {
+            color: #666;
+            margin-top: 10px; 
+            flex-basis: 100%; 
+        }
+
+        .course-info {
+            margin-top: 10px;
+            flex-basis: 100%; 
+        }
+
+        .course-info span {
+            margin-right: 20px;
+        }
+
+        .apply-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-self: flex-end; 
+        }
+
+        footer {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="index1.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="course.html">Courses</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<div class="container">
+    <img src="uploads/logo.jpg.jpg" alt="EduConnect Logo" class="logo"><br>
+
+    <h1>Courses Offered by SA EduConnect</h1>
+    <ul>
+        <li>
+            <div class="course-title">Introduction to Programming</div>
+            <div class="course-description">Learn the basics of programming using popular languages like Python, JavaScript, and Java. This course covers fundamental concepts such as variables, loops, conditionals, and functions.</div>
+            <div class="course-info">
+                <span>Duration: 6 weeks</span>
+                <span>Fees: $100</span>
+            </div>
+            <a href="apply.html">  <button class="apply-button">Apply Now</button></a>
+        </li>
+        <li>
+            <div class="course-title">Web Development</div>
+            <div class="course-description">Master the art of building dynamic websites and web applications using HTML, CSS, and JavaScript. This course covers frontend and backend development, as well as popular frameworks like React and Node.js.</div>
+            <div class="course-info">
+                <span>Duration: 8 weeks</span>
+                <span>Fees: $150</span>
+            </div>
+            <a href="apply.html">  <button class="apply-button">Apply Now</button></a>
+        </li>
+        <li>
+            <div class="course-title">Data Science and Machine Learning</div>
+            <div class="course-description">Explore the world of data science and machine learning through hands-on projects and real-world applications. This course covers data analysis, statistical modeling, machine learning algorithms, and more.</div>
+            <div class="course-info">
+                <span>Duration: 10 weeks</span>
+                <span>Fees: $200</span>
+            </div>
+           <a href="apply.html">  <button class="apply-button">Apply Now</button></a>
+        </li>
+    </ul>
+</div>
+<footer>
+    <p>&copy; 2024 SAEduConnect. All rights reserved.</p>
+</footer>
+</body>
+</html>

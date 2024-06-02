@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - Course Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"],
+        #submitPayment {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        #paymentSection,
+        #paymentConfirmation {
+            display: none;
+        }
+
+        #qrCodeImage {
+            max-width: 100%;
+            height: 500px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="courseApplicationForm">
+        <!-- Course Application Form -->
+        <h2>Course Application Form</h2>
+        <form id="courseForm">
+            <!-- Course-specific fields -->
+            <label for="courseSelect">Select Course:</label>
+            <select id="courseSelect" name="courseSelect">
+                <option value="introToProgramming">Introduction to Programming</option>
+                <option value="webDevelopment">Web Development</option>
+                <option value="dataScience">Data Science and Machine Learning</option>
+            </select><br>
+        
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <input type="submit" value="Next: Payment" id="submitCourseForm">
+        </form>
+    </div>
+
+    <div id="paymentSection">
+        <h2>Payment</h2>
+        <img id="qrCodeImage" src="uploads/qr.jpg.jpeg "alt="QR Code Image"><br>
+        <p>Please upload the QR code screenshot to pay the course fees.</p>
+        <input type="file" id="qrCodeUpload" accept="image/*"><br>
+        <button id="submitPayment">Submit Payment</button>
+    </div>
+
+    <div id="paymentConfirmation">
+        <h2>Payment Confirmation</h2>
+        <p>Thank you for your payment. Your course application is now complete.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const courses = {
+                introToProgramming: {
+                    name: "Introduction to Programming",
+                    details: "Learn the basics of programming using popular languages like Python, JavaScript, and Java. This course covers fundamental concepts such as variables, loops, conditionals, and functions."
+                },
+                webDevelopment: {
+                    name: "Web Development",
+                    details: "Master the art of building dynamic websites and web applications using HTML, CSS, and JavaScript. This course covers frontend and backend development, as well as popular frameworks like React and Node.js."
+                },
+                dataScience: {
+                    name: "Data Science and Machine Learning",
+                    details: "Explore the world of data science and machine learning through hands-on projects and real-world applications. This course covers data analysis, statistical modeling, machine learning algorithms, and more."
+                }
+            };
+
+            document.getElementById('courseSelect').addEventListener('change', function() {
+                const selectedCourse = this.value;
+                document.getElementById('courseName').value = courses[selectedCourse].name;
+                document.getElementById('courseDetails').value = courses[selectedCourse].details;
+            });
+
+            document.getElementById('submitCourseForm').addEventListener('click', function(event) {
+                event.preventDefault();
+                document.getElementById('courseApplicationForm').style.display = 'none';
+                document.getElementById('paymentSection').style.display = 'block';
+            });
+
+            document.getElementById('submitPayment').addEventListener('click', function() {
+                const qrCodeFile = document.getElementById('qrCodeUpload').files[0];
+                if (qrCodeFile) {
+                
+                    document.getElementById('paymentSection').style.display = 'none';
+                    document.getElementById('paymentConfirmation').style.display = 'block';
+                } else {
+                    alert('Please upload a QR code screenshot.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
